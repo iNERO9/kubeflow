@@ -24,5 +24,7 @@ kfp
 COPY . .
 RUN chmod +x main.py entrypoint.sh test_kfp.yaml
 RUN pip install -r requirements.txt 
+CMD [ "ls" ]
+CMD [ "pwd" ]
 ENTRYPOINT ["/entrypoint.sh"]
 # CMD [ "python", "main.py", "run_test" ,"pipdecss", "exp3" ,"exp4" ,"exp456","kubeflow-user-example-com", "test_kfp.yaml"]
