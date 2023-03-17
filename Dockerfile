@@ -22,7 +22,7 @@ RUN pip3 install --no-cache-dir \
 kfp
 
 COPY . .
-RUN chmod +x main.py entrypoint.sh
-RUN pip install -r requirements.txt test_kfp.yaml
+RUN chmod +x main.py entrypoint.sh test_kfp.yaml
+RUN pip install -r requirements.txt 
 ENTRYPOINT ["/entrypoint.sh"]
 # CMD [ "python", "main.py", "run_test" ,"pipdecss", "exp3" ,"exp4" ,"exp456","kubeflow-user-example-com", "test_kfp.yaml"]
